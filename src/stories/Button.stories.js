@@ -1,9 +1,9 @@
-import VwcButton from '../components/VwcButton.vue';
+import VButton from '../components/VButton.vue';
 import { Connotation } from '@vonage/vvd-foundation/constants';
 
 export default {
   title: 'Wrappers/Button',
-  component: VwcButton,
+  component: VButton,
   argTypes: {
     label: {
       type: { name: 'string', required: true },
@@ -15,11 +15,11 @@ export default {
 };
 
 const Template = (args) => ({
-  components: { VwcButton },
+  components: { VButton },
   setup() {
     return { args };
   },
-  template: '<vwc-button v-bind="args" />',
+  template: '<v-button v-bind="args" />',
 });
 
 export const Basic = Template.bind({});
@@ -40,4 +40,10 @@ export const Dense = Template.bind({});
 Dense.args = {
   layout : "filled",
   dense: true,
+};
+
+export const Pending = Template.bind({});
+Pending.args = {
+  layout : "filled",
+  pending: true,
 };
