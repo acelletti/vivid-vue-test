@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import VButton from '../components/VButton.vue';
+import VButton from '../../components/VButton.vue';
 </script>
 
 <template>
@@ -16,7 +16,7 @@ import VButton from '../components/VButton.vue';
     <h3>Disabled</h3>
     <div class="showcase">
       <v-button label="Disabled" layout="outlined" disabled/>
-      <v-button label="Disabled" layout="filled" disabled="true"/>
+      <v-button label="Disabled" layout="filled" :disabled="true"/>
     </div>
     <h3>Icons</h3>
     <div class="showcase">
